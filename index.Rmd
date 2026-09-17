@@ -12,7 +12,7 @@ date: "`r format(Sys.time(), '%Y-%b-%d, %I:%M %p')`"
   <img src="IMG_2230.jpeg" width= "50%"  />
 </p>
 # About me
-I earned my B.S in Biology and Master's degree in Bioengineering from the **University of Puerto Rico at Mayaguez (UPRM)** where I am currently pursuing a Ph.D. in Bioengineering. My research focuses on the use of Digital Twin technology to develop computational simulations of the immune system. Specifically, I am interested in understanding how perturbations in immune responses following viral infectionmay contribute to the development of autoimmune conditions. 
+I earned my B.S in Biology and Master's degree in Bioengineering from the **University of Puerto Rico at Mayaguez (UPRM)** where I am currently pursuing a Ph.D. in Bioengineering. My research focuses on the use of Digital Twin technology to develop computational simulations of the immune system. Specifically, I am interested in understanding how perturbations in immune responses following viral infection may contribute to the development of autoimmune conditions. 
 
 
-
+### [assigment1](Assigment-1.html)

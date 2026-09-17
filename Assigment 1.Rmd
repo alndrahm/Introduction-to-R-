@@ -1,0 +1,14 @@
+---
+title: "Assigment 1"
+author: "Alondra Hidalgo Morales"
+date:  "`r format(Sys.time(), '%Y-%b-%d, %I:%M %p')`"
+
+---
+
+hola
+
+
+
+
+
+
