@@ -5,28 +5,28 @@ date:  "`r format(Sys.time(), '%Y-%b-%d, %I:%M %p')`"
 
 ---
 
-##### Q1. Create an object called height with the value 175. Print it.
+###### **Q1. Create an object called height with the value 175. Print it.**
 ```{r}
 height <- 175
 height
 ```
 
-##### Q2. Calculate the result of 25 * 4 - 10.
+###### **Q2. Calculate the result of 25 * 4 - 10.**
 ```{r}
 25 * 4 - 10
 ```
 
-##### Q3. Use the function sqrt() to calculate the square root of 81.
+###### **Q3. Use the function sqrt() to calculate the square root of 81**
 ```{r}
 sqrt(81)
 ```
-##### Q4. Assign the phrase “R is fun!” to an object called message. Print it.
+###### **Q4. Assign the phrase “R is fun!” to an object called message. Print it.**
 ```{r}
 message <- "R is fun!"
 message
 ```
 
-##### Q5. Create two objects a <- 10 and b <- 5. Calculate their sum and store it in c. 
+###### **Q5. Create two objects a <- 10 and b <- 5. Calculate their sum and store it in c.**
 ```{r}
 a <- 10
 b <- 5
@@ -34,14 +34,46 @@ c <- a +b
 c
 ```
 
-##### Q6. Test whether 15 is greater than 20. 
+###### **Q6. Test whether 15 is greater than 20.** 
 ```{r}
 15 > 20
 
 ```
-##### Q7. Check the class of the object "Hello World"
+###### **Q7. Check the class of the object "Hello World"**
+
+```{r}
+class("Hello World")
+```
+
+###### **Q8. Code chunk options**
+```{r}
+log(-1)
+```
+
+###### The chunk option 'warning=FALSE' was used to suppress the warning without changing the code itself 
+```{r, warning=FALSE}
+log(-1)
+```
 
 
+###### **Q9. Code chunk options** 
 
+```{r}
+# Load a package (may produce messages)
+library(dplyr)
+```
 
+###### The chunk option 'message=FALSE' was used to suppress the warning without changing the code itself 
+```{r, message=FALSE}
+# Load a package (may produce messages)
+library(dplyr)
+```
+
+###### **Q10. Create a numeric vector called grades containing the values 80, 90, 75, 95, and 85. Then, use the mean() function to calculate the average grade and store the result in an object called average. Print the result.**
+
+```{r}
+grades <- c(80, 90, 75, 95, 85)
+average <- mean(grades)
+average
+```
 
