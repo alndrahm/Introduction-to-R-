@@ -1,0 +1,47 @@
+---
+title: "Assignment 3"
+author: "Alondra Hidalgo Morales"
+date:  "`r format(Sys.time(), '%Y-%b-%d, %I:%M %p')`"
+---
+```{r}
+library(ggplot2)
+```
+```{r}
+data("trees")
+head(trees)
+```
+
+##### **Q1. Create a histogram showing the distribution of Girth**
+
+```{r}
+hist(trees$Girth)
+```
+
+##### **Q2. Create a histogram showing the distribution of Volume.**
+```{r}
+hist(trees$Volume,
+     main = "Distribution of volume",
+     xlab = "Volume")
+```
+
+##### **Q3. Create a scatterplot showing the relationship between Girth and Volume.**
+```{r}
+plot(trees$Girth, trees$Volume,
+     main = "Girth vs. Volume",
+     xlab = "Girth",
+     ylab = "Volume")
+```
+
+##### **Q4. Use the Shapiro–Wilk test to assess whether Volume is normally distributed. Report the p-value and state whether the data are normally distributed.**
+```{r}
+shapiro.test(trees$Volume)
+```
+
+###### The Shapiro-Wilk test gave a p-value of 0.003579. Since the p- value is less than 0.05 we reject the null hypothesis.Volume is not normally distributed
+
+##### **Q5. Repeat the Shapiro–Wilk test for Girth. Report the p-value and state whether Girth is normally distributed.**
+```{r}
+shapiro.test(trees$Girth)
+```
+
+###### The Shapiro-Wilk test gave a p-value of 0.08893. Since the p- value is greater than 0.05 we fail to reject the null hypothesis. Girth is normally distributed. 
