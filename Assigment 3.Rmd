@@ -14,7 +14,9 @@ head(trees)
 ##### **Q1. Create a histogram showing the distribution of Girth**
 
 ```{r}
-hist(trees$Girth)
+hist(trees$Girth,
+     main = "Distribution of Girth",
+     xlab = "Girth")
 ```
 
 ##### **Q2. Create a histogram showing the distribution of Volume.**
