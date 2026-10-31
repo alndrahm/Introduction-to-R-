@@ -1,0 +1,66 @@
+---
+title: "Assignment 4"
+author: "Alondra Hidalgo Morales"
+date:  "`r format(Sys.time(), '%Y-%b-%d, %I:%M %p')`"
+---
+
+```{r}
+library(tidyverse)
+library(readxl)
+library(BSDA)
+```
+
+
+#### **Q1. Normality test / Prueba de normalidad**
+```{r}
+butterflies <- read_excel("butterflies_pesticides.xlsx")
+head(butterflies)
+```
+```{r}
+table(butterflies$Group)
+```
+
+
+```{r}
+shapiro.test(butterflies$'Wing Length' [butterflies$Group=="group1"])
+```
+
+
+```{r}
+shapiro.test(butterflies$'Wing Length' [butterflies$Group=="group2"])
+```
+
+
+
+
+
+#### **Q2. Equality of variances test / Prueba de igualdad de varianzas**
+```{r}
+var.test(butterflies$'Wing Length'~butterflies$Group)
+```
+
+
+#### **Q3. Statistical test / Prueba estadística**
+```{r}
+t.test(filter(butterflies, Group=="group1")$'Wing Length',
+       filter(butterflies, Group=="group2")$'Wing Length',
+       alternative="two.sided",
+       mu=0,
+       paired=FALSE,
+       var.equal=FALSE)
+```
+
+
+#### **Q4. ggplot**
+```{r}
+ggplot(butterflies, aes(x=Group, y=`Wing Length`)) +
+  geom_boxplot() +
+  labs(title = "Butterfly Wing Length by Pesticide Treatment",
+       x="Treatment Group",
+       y="Wing Lenght")
+```
+
+
+#### **Q5. Summary paragraph / Párrafo de resumen**
+##### We examine whether pesticide exposure during the larval stage affects butterfly wing length by comparing 40 pesticide treated butterflies (group 2) with 40 untreated butterflies (group 1). Shapiro-Wilk tests indicated that both group were approximately normally distributed (p=0.146 and p=0.6247). An F-test showed significant difference in variance between the groups (p=0.005512). We used a two-tailed independent t-test to compare their mean wing lengths. The results showed statistically significant difference between the groups (t=3.9832, df=66.029, p=0.0001721). Untreated butterflies had a higher mean wing length (632.18) than pesticide treated butterflies (593.49). These findings suggest that pesticide exposure during larval stage may negatively impact butterfly wing development.
+

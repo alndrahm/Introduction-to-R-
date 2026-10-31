@@ -18,3 +18,5 @@ I earned my B.S in Biology and Master's degree in Bioengineering from the **Univ
 ### [Assignment 1](Assigment-1.html)
 ### [Assignment 2](Assigment-2.html)
 ### [Assignment 3](Assigment-3.html)
+### [Assignment 4](Assigment-4.html)
+
