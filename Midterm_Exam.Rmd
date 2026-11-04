@@ -1,0 +1,62 @@
+---
+title: "Midterm Exam"
+author: "Alondra Hidalgo Morales"
+date:  "`r format(Sys.time(), '%Y-%b-%d, %I:%M %p')`"
+---
+
+```{r}
+library(tidyverse)
+library(dplyr)
+# install.packages("aod")
+library(aod)
+```
+
+
+```{r}
+msleep <- glimpse(msleep)
+storms <- storms
+lizards <- lizards
+```
+```{r}
+head(msleep)
+```
+```{r}
+head(storms)
+```
+
+```{r}
+head(lizards)
+```
+
+##### 1. Use filter() to subset msleep to only animals who are awake for at least 12 hours of the day.
+
+```{r}
+msleep %>%
+  filter(sleep_total >= 12)
+```
+##### 2.Use mutate() to create a new column called percent_day_awake that gives the percentage of the day that each species spends awake. Use select() with everything() at the end to verify your calculation.
+```{r}
+newmsleep <- msleep %>% mutate(percent_day_awake = awake/24 *100 )
+newmsleep %>%
+  select(awake, percent_day_awake, everything())
+```
+
+##### 3. Use group_by() and summarise() to calculate the number of storms per year.
+```{r}
+storms %>%
+  group_by(year) %>%
+  summarise(num_storms=n())
+```
+
+##### 4. Use filter() to subset storms to only storms with wind speeds greater than 50 knots, then use arrange() to sort by wind descending.
+```{r}
+storms %>%
+  filter(wind > 50) %>%
+  arrange(desc(wind))
+```
+
+##### 6.Create a boxplot showing the distribution of opalinus counts under different light conditions (Sun vs. Shade) using ggplot2.
+```{r}
+ggplot(data= lizards, aes (x= Site, y= opalinus) ) + geom_boxplot()
+```
+

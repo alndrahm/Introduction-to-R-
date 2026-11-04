@@ -14,9 +14,12 @@ date: "`r format(Sys.time(), '%Y-%b-%d, %I:%M %p')`"
 # About me
 I earned my B.S in Biology and Master's degree in Bioengineering from the **University of Puerto Rico at Mayaguez (UPRM)** where I am currently pursuing a Ph.D. in Bioengineering. My research focuses on the use of Digital Twin technology to develop computational simulations of the immune system. Specifically, I am interested in understanding how perturbations in immune responses following viral infection may contribute to the development of autoimmune conditions. 
 
-
+## Assignments 
 ### [Assignment 1](Assigment-1.html)
 ### [Assignment 2](Assigment-2.html)
 ### [Assignment 3](Assigment-3.html)
 ### [Assignment 4](Assigment-4.html)
+
+## Exams
+### [Midterm Exam](Midterm_Exam.html)
 
